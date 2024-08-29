@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydmp"
+version = "0.0.1"
+description = "A Python implementation of Dynamic Movement Primitives"
+readme = "README.md"
+authors = [{ name = "Freddy Liendo", email = "liendomf@univ-smb.fr" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["feed", "reader", "tutorial"]
+dependencies = [
+    "numpy >= 1.0.0",
+    "pyquaternion",
+    "dual-quaternions",
+    'tomli; python_version < "3.11"',
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/fredward65/pydmp"
+
+[project.scripts]
+pydmp = "pydmp.__main__:main"
